@@ -1,0 +1,21 @@
+.flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alignCen {
+  display: flex;
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColCen {
+  @extend .flexCol;
+  align-items: center;
+  justify-content: center;
+}
