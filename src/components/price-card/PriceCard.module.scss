@@ -1,0 +1,73 @@
+@import "styles/common";
+
+.priceCard {
+  @extend .flexColCen;
+  justify-content: space-between;
+  width: 400px;
+  height: 750px;
+  padding: 2.7rem 2rem;
+  border: 2px dashed transparent;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0px 10px 50px 0px rgba(238, 154, 229, 0.15);
+
+  .title {
+    color: #010851;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 120%;
+  }
+
+  .desc {
+    color: #010851;
+    text-align: center;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .price {
+    @extend .alignEnd;
+    gap: 10px;
+
+    .amount {
+      color: #ed80fd;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .variant {
+      color: #010851;
+      text-align: center;
+      font-size: 18px;
+      line-height: 140%;
+      padding-bottom: 5px;
+    }
+  }
+
+  .features {
+    list-style: none;
+    @extend .flexCol;
+    gap: 1rem;
+    margin-top: 4.5rem;
+
+    li {
+      @extend .alignCen;
+      gap: 1.2rem;
+      color: #010851;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &:hover {
+    border-color: #ed80fd;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .priceCard {
+    width: 380px;
+  }
+}

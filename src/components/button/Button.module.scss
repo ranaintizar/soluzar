@@ -26,6 +26,16 @@
   text-decoration: underline;
 }
 
+.tertiary {
+  border-color: #ed80fd;
+  color: #ed80fd;
+
+  &:hover {
+    background: #ed80fd;
+    color: #fff;
+  }
+}
+
 @media screen and (max-width: 640px) {
   .btn {
     padding: 13px 1.2rem;
