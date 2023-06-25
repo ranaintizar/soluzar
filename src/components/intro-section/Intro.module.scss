@@ -1,0 +1,84 @@
+@import "styles/common";
+
+.intro {
+  display: flex;
+  width: calc(100% - 2rem);
+  max-width: 1300px;
+  min-height: 720px;
+  border-radius: 48px 48px 300px 48px;
+  background: linear-gradient(135deg, #5961f9 0%, #ee9ae5 100%);
+
+  .img {
+    width: 40%;
+    @extend .alignEnd;
+    padding-bottom: 5rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex: 1;
+    @extend .flexColCen;
+    gap: 2rem;
+    padding: 1rem 3rem;
+
+    .heading {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    .desc {
+      color: #ffffffcc;
+    }
+
+    .btnContainer {
+      width: 100%;
+      display: flex;
+      gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .intro {
+    .content {
+      padding: 1rem;
+
+      .heading {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+      max-width: 600px;
+      padding: 5rem 1rem 0 1rem;
+    }
+
+    .img {
+      width: 100%;
+      max-width: 500px;
+      align-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .intro {
+    width: 100%;
+    border-radius: 30px 30px 150px 30px;
+
+    .img {
+      max-width: 400px;
+    }
+  }
+}
