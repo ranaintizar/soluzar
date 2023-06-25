@@ -1,6 +1,7 @@
 // import Button from "components/button";
+import FeatureCard from "components/feature-card";
 import Header from "components/header";
-import Intro from "components/intro-section";
+// import Intro from "components/intro-section";
 import Head from "next/head";
 
 export default function Home() {
@@ -14,9 +15,10 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <Intro />
+        {/* <Intro /> */}
         {/* <Button /> */}
         {/* <h1>Soluzar</h1> */}
+        <FeatureCard />
       </main>
     </>
   );
