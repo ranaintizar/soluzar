@@ -13,7 +13,7 @@ const FeatureCard = ({ src, text }: Props) => {
   return (
     <div className={stl.featureCard}>
       <div className={stl.img}>
-        <img src={src} />
+        <img src={src} alt="image-1" />
       </div>
       <div className={stl.desc}>{text}</div>
     </div>

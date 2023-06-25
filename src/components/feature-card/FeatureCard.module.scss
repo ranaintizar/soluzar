@@ -7,6 +7,8 @@
   border-radius: 48px;
   background: #fff;
   box-shadow: 0px 10px 50px 0px #ee9ae526;
+  transition: all 0.3s;
+  rotate: -8deg;
 
   .img {
     @extend .flexCenter;
@@ -18,6 +20,10 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 130%;
+  }
+
+  &:hover {
+    rotate: 0deg;
   }
 }
 
