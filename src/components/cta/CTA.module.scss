@@ -1,0 +1,63 @@
+@import "styles/common";
+
+.cta {
+  @extend .alignCen;
+  justify-content: space-between;
+  width: 93%;
+  max-width: 1300px;
+  padding: 0 2rem;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #5961f9 0%, #ee9ae5 100%);
+
+  .content {
+    @extend .flexCol;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 4rem 0;
+    gap: 2rem;
+    width: 50%;
+    height: 100%;
+
+    .heading {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    .desc {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+
+  .img {
+    @extend .flexCenter;
+    width: 50%;
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .cta {
+    flex-direction: column;
+
+    .content {
+      width: 100%;
+      max-width: 500px;
+      padding-bottom: 0;
+    }
+
+    .img {
+      width: 100%;
+      max-width: 550px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cta .content .heading {
+    font-size: 2.3rem;
+  }
+}

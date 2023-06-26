@@ -40,10 +40,10 @@ const PriceCard = ({ type, variant }: Props) => {
   return (
     <div className={stl.priceCard}>
       <div className={stl.title}>{capitalizeFirstLetter(type)}</div>
-      <div className={stl.desc}>
+      <p className={stl.desc}>
         On the other hand, we denounce with righteous indignation and dislike
         men who are so beguiled and demoralized
-      </div>
+      </p>
       <div className={stl.price}>
         <span className={stl.amount}>
           {variant === "yearly" ? pricesYearly[type] : pricesMonthly[type]}

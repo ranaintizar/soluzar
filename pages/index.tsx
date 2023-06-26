@@ -1,5 +1,5 @@
+import CTA from "components/cta";
 import Header from "components/header";
-import PriceCard from "components/price-card";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <PriceCard />
+        <CTA />
       </main>
     </>
   );

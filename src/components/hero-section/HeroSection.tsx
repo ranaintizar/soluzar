@@ -26,7 +26,7 @@ const HeroSection = ({ swap, src, heading, headingSpecial, desc }: Props) => {
         <div className={stl.heading}>
           {heading} <span>{headingSpecial}</span>
         </div>
-        <span className={stl.desc}>{desc}</span>
+        <p className={stl.desc}>{desc}</p>
         <div className={stl.btn}>
           <Button />
         </div>
