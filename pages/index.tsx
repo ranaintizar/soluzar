@@ -1,4 +1,4 @@
-import Footer from "components/footer";
+import FeaturesSection from "components/features-section";
 import Header from "components/header";
 import Head from "next/head";
 
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <Footer />
+        <FeaturesSection />
       </main>
     </>
   );
