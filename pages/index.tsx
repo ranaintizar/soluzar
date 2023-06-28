@@ -1,5 +1,5 @@
-import FeaturesSection from "components/features-section";
 import Header from "components/header";
+import PlansSection from "components/plans-section";
 import Head from "next/head";
 
 export default function Home() {
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <FeaturesSection />
+        <PlansSection />
       </main>
     </>
   );

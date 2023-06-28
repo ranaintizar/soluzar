@@ -1,0 +1,95 @@
+@import "styles/common";
+
+.planSec {
+  @extend .flexColCen;
+  padding: 3rem 0;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1300px;
+  background: #fff;
+
+  .content {
+    @extend .flexCol;
+    gap: 1.5rem;
+    width: 95%;
+    max-width: 600px;
+
+    .heading {
+      font-size: 40px;
+      text-align: center;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .desc {
+      text-align: center;
+      font-size: 18px;
+      line-height: 120%;
+    }
+  }
+
+  .variant {
+    @extend .alignCen;
+    gap: 2rem;
+
+    span {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+
+  .slider {
+    @extend .flexColCen;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
+
+    .priceCards {
+      width: 100%;
+      @extend .alignCen;
+      justify-content: space-evenly;
+      padding: 2rem;
+      gap: 1rem;
+      transition: all 0.3s;
+    }
+
+    .sliderDots {
+      display: none;
+      gap: 1rem;
+
+      .dot {
+        @include setSquare(1rem);
+        border-radius: 8px;
+        border: 1px solid #010851;
+        cursor: pointer;
+
+        &:hover {
+          background: #010851;
+        }
+      }
+
+      .active {
+        background: #010851;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .planSec .slider {
+    max-width: 420px;
+
+    .priceCards {
+      max-width: 420px;
+      gap: 2rem !important;
+    }
+
+    .sliderDots {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
