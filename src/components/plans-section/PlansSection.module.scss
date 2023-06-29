@@ -2,11 +2,10 @@
 
 .planSec {
   @extend .flexColCen;
-  padding: 3rem 0;
+  padding-top: 3rem;
   gap: 3rem;
   width: 100%;
   max-width: 1300px;
-  background: #fff;
 
   .content {
     @extend .flexCol;

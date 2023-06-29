@@ -1,14 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
 import Button from "components/button";
 
-import Image from "assets/intro.png";
+import Img from "assets/intro.png";
 
 import stl from "./Intro.module.scss";
 
 const Intro = () => {
   return (
-    <div className={stl.intro}>
+    <div id="overview" className={stl.intro}>
       <div className={stl.content}>
         <h1 className={stl.heading}>
           Develop all your skills without diligence
@@ -24,7 +25,7 @@ const Intro = () => {
         </div>
       </div>
       <div className={stl.img}>
-        <img src={Image.src} alt="image" />
+        <Image src={Img} alt="image" />
       </div>
     </div>
   );
