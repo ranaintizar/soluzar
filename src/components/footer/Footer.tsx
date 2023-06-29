@@ -12,14 +12,26 @@ import LinkedInIcon from "assets/linkedin.svg";
 
 import stl from "./Footer.module.scss";
 
-const Footer = () => {
+interface Props {
+  setShowDailogue: (arg: any) => void;
+  setData: (arg: any) => void;
+}
+
+const Footer = ({ setShowDailogue, setData }: Props) => {
   const [email, setEmail] = React.useState("");
 
   const submitEmail = () => {
     validateEmail(email)
-      ? alert(`Your Email: ${email} \n is Subscribed!`)
-      : alert("Email is not valid");
+      ? setData({
+          variant: "success",
+          email,
+        })
+      : setData({
+          variant: "error",
+          email,
+        });
     setEmail("");
+    setShowDailogue(true);
   };
 
   const validateEmail = (email: string) => {
