@@ -8,6 +8,8 @@ import HeroSection from "components/hero-section";
 import Intro from "components/intro-section";
 import PlansSection from "components/plans-section";
 
+import Img from "assets/image-3.png";
+
 import stl from "./home.module.scss";
 
 export default function Home() {
@@ -26,6 +28,7 @@ export default function Home() {
         <div id="about" className={stl.section}>
           <HeroSection />
           <HeroSection
+            src={Img}
             swap={true}
             heading="You can practice any time convenient for you"
           />

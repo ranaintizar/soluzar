@@ -10,7 +10,7 @@ import stl from "./HeroSection.module.scss";
 
 interface Props {
   swap: Boolean;
-  src: string;
+  src: any;
   heading: string;
   headingSpecial: string;
   desc: string;

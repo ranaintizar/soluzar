@@ -2,6 +2,7 @@
 
 .intro {
   display: flex;
+  justify-content: space-between;
   width: calc(100% - 2rem);
   max-width: 1300px;
   min-height: 720px;
@@ -19,9 +20,9 @@
   }
 
   .content {
-    flex: 1;
     @extend .flexColCen;
     gap: 2rem;
+    width: 55%;
     padding: 1rem 3rem;
 
     .heading {
