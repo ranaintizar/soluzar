@@ -10,21 +10,19 @@ interface Props {
   customClass?: string;
 }
 
-const Button = ({ variant, label, handleOnClick, customClass }: Props) => {
-  return (
-    <button
-      className={clsx(stl.btn, stl[variant], customClass)}
-      onClick={handleOnClick}
-    >
-      {label}
-    </button>
-  );
-};
+const Button = ({ variant, label, handleOnClick, customClass }: Props) => (
+  <button
+    className={clsx(stl.btn, stl[variant], customClass)}
+    onClick={handleOnClick}
+  >
+    {label}
+  </button>
+);
 
 Button.defaultProps = {
   variant: "primary",
   label: "Get Started",
-  handleOnClick: () => console.log("Button Clicked..."),
+  handleOnClick: () => {},
 };
 
 export default Button;

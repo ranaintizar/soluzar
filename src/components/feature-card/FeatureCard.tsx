@@ -13,18 +13,16 @@ interface Props {
   theme: string;
 }
 
-const FeatureCard = ({ src, text, theme, customClass }: Props) => {
-  return (
-    <div
-      className={clsx(stl.featureCard, stl[`${theme}FeatureCard`], customClass)}
-    >
-      <div className={stl.img}>
-        <Image src={src} alt="image" />
-      </div>
-      <p className={stl.desc}>{text}</p>
+const FeatureCard = ({ src, text, theme, customClass }: Props) => (
+  <div
+    className={clsx(stl.featureCard, stl[`${theme}FeatureCard`], customClass)}
+  >
+    <div className={stl.img}>
+      <Image src={src} alt="image" />
     </div>
-  );
-};
+    <p className={stl.desc}>{text}</p>
+  </div>
+);
 
 FeatureCard.defaultProps = {
   src: Img,
