@@ -8,12 +8,14 @@ interface Props {
   visible: Boolean;
   setIsVisible: (arg: any) => void;
   data: { variant: string; email: string };
+  theme: string;
 }
 
-const Modal = ({ visible, setIsVisible, data }: Props) => {
+const Modal = ({ visible, setIsVisible, data, theme }: Props) => {
   return (
     <div className={stl.modal}>
       <AlertBox
+        theme={theme}
         variant={data.variant}
         email={data.email}
         visible={visible}

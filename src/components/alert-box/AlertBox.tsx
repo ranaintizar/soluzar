@@ -10,11 +10,24 @@ interface Props {
   handleCloseBtnClick: () => void;
   variant: string;
   visible: Boolean;
+  theme: string;
 }
 
-const AlertBox = ({ email, handleCloseBtnClick, variant, visible }: Props) => {
+const AlertBox = ({
+  email,
+  handleCloseBtnClick,
+  variant,
+  visible,
+  theme,
+}: Props) => {
   return (
-    <div className={clsx(stl.alertBox, visible ? stl.showPopup : "")}>
+    <div
+      className={clsx(
+        stl.alertBox,
+        visible ? stl.showPopup : "",
+        stl[`${theme}AlertBox`]
+      )}
+    >
       <div
         className={stl.header}
         style={

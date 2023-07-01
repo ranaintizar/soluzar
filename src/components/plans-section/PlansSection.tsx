@@ -6,7 +6,11 @@ import PriceCard from "components/price-card";
 
 import stl from "./PlansSection.module.scss";
 
-const PlansSection = () => {
+interface Props {
+  theme: string;
+}
+
+const PlansSection = ({ theme }: Props) => {
   const [status, getStatus] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState("slide2");
   const [width, setWidth] = React.useState(500);
@@ -63,7 +67,7 @@ const PlansSection = () => {
   };
 
   return (
-    <div id="pricing" className={stl.planSec}>
+    <div id="pricing" className={clsx(stl.planSec, stl[`${theme}PlanSec`])}>
       <div className={stl.content}>
         <div className={stl.heading}>Here are all our plans</div>
         <p className={stl.desc}>
@@ -78,9 +82,17 @@ const PlansSection = () => {
       </div>
       <div className={stl.slider}>
         <div id="slider" className={stl.priceCards}>
-          <PriceCard variant={status ? "yearly" : "monthly"} />
-          <PriceCard type="advance" variant={status ? "yearly" : "monthly"} />
-          <PriceCard type="premium" variant={status ? "yearly" : "monthly"} />
+          <PriceCard variant={status ? "yearly" : "monthly"} theme={theme} />
+          <PriceCard
+            type="advance"
+            variant={status ? "yearly" : "monthly"}
+            theme={theme}
+          />
+          <PriceCard
+            type="premium"
+            variant={status ? "yearly" : "monthly"}
+            theme={theme}
+          />
         </div>
         <div className={stl.sliderDots}>
           <div

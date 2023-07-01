@@ -10,9 +10,10 @@ import stl from "./Header.module.scss";
 
 interface Props {
   links: Array<{ name: string; href: string }>;
+  theme: string;
 }
 
-const Header = ({ links }: Props) => {
+const Header = ({ links, theme }: Props) => {
   const [expand, setIsExpand] = React.useState(false);
 
   const [width, setWidth] = React.useState(500);
@@ -39,7 +40,13 @@ const Header = ({ links }: Props) => {
   }, []);
 
   return (
-    <header className={clsx(stl.header, expand ? stl.expand : "")}>
+    <header
+      className={clsx(
+        stl.header,
+        expand ? stl.expand : "",
+        stl[`${theme}Header`]
+      )}
+    >
       <div className={stl.container}>
         <div className={stl.logo}>
           <Image

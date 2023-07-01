@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 
 import Button from "components/button";
 
@@ -10,9 +11,10 @@ import stl from "./PriceCard.module.scss";
 interface Props {
   type: string;
   variant: string;
+  theme: string;
 }
 
-const PriceCard = ({ type, variant }: Props) => {
+const PriceCard = ({ type, variant, theme }: Props) => {
   const pricesMonthly: { [index: string]: string } = {
     start: "50$",
     advance: "75$",
@@ -38,7 +40,7 @@ const PriceCard = ({ type, variant }: Props) => {
   }
 
   return (
-    <div className={stl.priceCard}>
+    <div className={clsx(stl.priceCard, stl[`${theme}PriceCard`])}>
       <div className={stl.title}>{capitalizeFirstLetter(type)}</div>
       <p className={stl.desc}>
         On the other hand, we denounce with righteous indignation and dislike

@@ -1,5 +1,14 @@
 @import "styles/common";
 
+.darkMain {
+  background: #16161a;
+  color: #fff;
+
+  p {
+    color: #f1f2f5;
+  }
+}
+
 .section {
   @extend .flexColCen;
   width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import clsx from "clsx";
 
 import Button from "components/button";
 
@@ -15,9 +16,10 @@ import stl from "./Footer.module.scss";
 interface Props {
   setShowDailogue: (arg: any) => void;
   setData: (arg: any) => void;
+  theme: string;
 }
 
-const Footer = ({ setShowDailogue, setData }: Props) => {
+const Footer = ({ setShowDailogue, setData, theme }: Props) => {
   const [email, setEmail] = React.useState("");
 
   const submitEmail = () => {
@@ -40,7 +42,7 @@ const Footer = ({ setShowDailogue, setData }: Props) => {
   };
 
   return (
-    <div className={stl.footer}>
+    <div className={clsx(stl.footer, stl[`${theme}Footer`])}>
       <div className={stl.container}>
         <div className={stl.row1}>
           <div className={stl.left}>
