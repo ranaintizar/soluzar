@@ -1,0 +1,35 @@
+@import "styles/common";
+
+.featureCard {
+  @extend .flexColCen;
+  width: 300px;
+  padding: 2rem 3.5rem;
+  border-radius: 48px;
+  background: #fff;
+  box-shadow: 0px 10px 50px 0px #ee9ae526;
+  transition: all 0.3s;
+  rotate: -8deg;
+
+  .img {
+    @extend .flexCenter;
+    height: 100%;
+  }
+
+  .desc {
+    color: #010851;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  &:hover {
+    rotate: 0deg;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .featureCard {
+    width: 250px;
+    padding: 1.2rem 2.5rem;
+  }
+}
