@@ -1,4 +1,6 @@
+// import Button from "components/button";
 import Header from "components/header";
+import Intro from "components/intro-section";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,7 +14,9 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <h1>Soluzar</h1>
+        <Intro />
+        {/* <Button /> */}
+        {/* <h1>Soluzar</h1> */}
       </main>
     </>
   );

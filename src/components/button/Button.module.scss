@@ -1,0 +1,40 @@
+.btn {
+  background: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid #ffffff80;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.primary {
+  background: #ed80fd;
+  border-color: #ed80fd;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.secondary:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 640px) {
+  .btn {
+    padding: 13px 1.2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .btn {
+    padding: 10px 1rem;
+    font-size: 1rem;
+  }
+}
