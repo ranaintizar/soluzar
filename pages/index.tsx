@@ -1,4 +1,4 @@
-import CTA from "components/cta";
+import Footer from "components/footer";
 import Header from "components/header";
 import Head from "next/head";
 
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
-        <CTA />
+        <Footer />
       </main>
     </>
   );
