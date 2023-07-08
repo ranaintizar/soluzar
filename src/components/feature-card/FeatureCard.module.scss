@@ -2,13 +2,13 @@
 
 .featureCard {
   @extend .flexColCen;
-  width: 300px;
+  width: 280px;
+  height: 380px;
   padding: 2rem 3.5rem;
   border-radius: 40px;
   background: #fff;
   box-shadow: 0px 10px 50px 0px #ee9ae526;
-  transition: all 0.3s;
-  rotate: -8deg;
+  transition: all 0.3s ease;
 
   .img {
     @extend .flexCenter;
@@ -16,20 +16,21 @@
   }
 
   .desc {
-    color: #010851;
     font-size: 24px;
     font-weight: 700;
     line-height: 130%;
   }
 
   &:hover {
-    rotate: 0deg;
+    transform: translate(0, -1rem);
+    box-shadow: 0px 10px 50px 0px #00000026;
   }
 }
 
 @media screen and (max-width: 748px) {
   .featureCard {
     width: 250px;
+    height: 350px;
     padding: 1.2rem 2.5rem;
   }
 }

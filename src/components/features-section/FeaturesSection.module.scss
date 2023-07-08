@@ -1,0 +1,48 @@
+@import "styles/common";
+
+.featuresSec {
+  @extend .flexColCen;
+  gap: 4rem;
+  width: 100%;
+  max-width: 1300px;
+  background: #fff;
+  padding: 2rem 1rem;
+
+  .content {
+    @extend .flexColCen;
+    gap: 1.5rem;
+
+    .heading {
+      max-width: 600px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 120%;
+    }
+
+    .desc {
+      width: 95%;
+      max-width: 550px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 140%;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    @extend .justifyEven;
+    flex-wrap: wrap;
+    gap: 2rem 1.2rem;
+
+    .card {
+      margin-top: 7%;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .featuresSec .cards .card {
+    margin-top: 0;
+  }
+}
