@@ -3,7 +3,8 @@
 .priceCard {
   @extend .flexColCen;
   justify-content: space-between;
-  width: 400px;
+  min-width: 370px;
+  max-width: 380px;
   height: 750px;
   padding: 2.7rem 2rem;
   border: 2px dashed transparent;
@@ -59,11 +60,5 @@
 
   &:hover {
     border-color: #ed80fd;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .priceCard {
-    width: 380px;
   }
 }

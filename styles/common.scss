@@ -1,3 +1,8 @@
+@mixin setSquare($value) {
+  width: $value;
+  height: $value;
+}
+
 .flexCenter {
   display: flex;
   align-items: center;

@@ -9,7 +9,7 @@ import stl from "./PriceCard.module.scss";
 
 interface Props {
   type: string;
-  variant: "monthly" | "yearly";
+  variant: string;
 }
 
 const PriceCard = ({ type, variant }: Props) => {
