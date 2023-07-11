@@ -62,14 +62,14 @@
       }
 
       .right {
-        display: flex;
-        justify-content: space-evenly;
+        @extend .justifyEven;
         width: 50%;
         gap: 10px;
 
         .listContainer {
           @extend .flexCol;
           width: 100%;
+          min-width: 140px;
           max-width: 200px;
           gap: 1rem;
 
@@ -111,7 +111,7 @@
       padding: 0 1rem;
 
       .copyrightText {
-        color: rgba(255, 255, 255, 0.8);
+        color: #ffffffcc;
         font-size: 16px;
         line-height: 100%;
       }

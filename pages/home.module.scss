@@ -1,0 +1,14 @@
+@import "styles/common";
+
+.section {
+  @extend .flexColCen;
+  width: 100%;
+  gap: 2rem;
+  background: #ed80fd0d;
+}
+
+@media screen and (max-width: 800px) {
+  .section {
+    gap: 3rem;
+  }
+}

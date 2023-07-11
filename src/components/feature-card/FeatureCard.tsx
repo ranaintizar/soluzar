@@ -1,12 +1,13 @@
 import React from "react";
+import Image from "next/image";
 import clsx from "clsx";
 
-import Image from "assets/feature-1.png";
+import Img from "assets/feature-1.png";
 
 import stl from "./FeatureCard.module.scss";
 
 interface Props {
-  src: string;
+  src: any;
   text: string;
   customClass?: string;
 }
@@ -15,7 +16,7 @@ const FeatureCard = ({ src, text, customClass }: Props) => {
   return (
     <div className={clsx(stl.featureCard, customClass)}>
       <div className={stl.img}>
-        <img src={src} alt="image-1" />
+        <Image src={src} alt="image" />
       </div>
       <div className={stl.desc}>{text}</div>
     </div>
@@ -23,7 +24,7 @@ const FeatureCard = ({ src, text, customClass }: Props) => {
 };
 
 FeatureCard.defaultProps = {
-  src: Image.src,
+  src: Img,
   text: "Convenient study schedule",
 };
 

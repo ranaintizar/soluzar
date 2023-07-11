@@ -62,10 +62,8 @@ const PlansSection = () => {
     ele.classList.add(stl.active);
   };
 
-  console.log(status);
-
   return (
-    <div className={stl.planSec}>
+    <div id="pricing" className={stl.planSec}>
       <div className={stl.content}>
         <div className={stl.heading}>Here are all our plans</div>
         <p className={stl.desc}>
