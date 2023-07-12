@@ -28,7 +28,7 @@ const ToggleBtn = ({ giveStatus }: Props) => {
 };
 
 ToggleBtn.defaultProps = {
-  giveStatus: (val: Boolean) => console.log(val),
+  giveStatus: () => {},
 };
 
 export default ToggleBtn;

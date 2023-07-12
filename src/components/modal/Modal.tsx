@@ -11,18 +11,16 @@ interface Props {
   theme: string;
 }
 
-const Modal = ({ visible, setIsVisible, data, theme }: Props) => {
-  return (
-    <div className={stl.modal}>
-      <AlertBox
-        theme={theme}
-        variant={data.variant}
-        email={data.email}
-        visible={visible}
-        handleCloseBtnClick={() => setIsVisible(false)}
-      />
-    </div>
-  );
-};
+const Modal = ({ visible, setIsVisible, data, theme }: Props) => (
+  <div className={stl.modal}>
+    <AlertBox
+      theme={theme}
+      variant={data.variant}
+      email={data.email}
+      visible={visible}
+      handleCloseBtnClick={() => setIsVisible(false)}
+    />
+  </div>
+);
 
 export default Modal;

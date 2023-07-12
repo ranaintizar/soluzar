@@ -65,19 +65,11 @@ const Header = ({ links, theme }: Props) => {
           ))}
         </div>
         <div className={stl.right}>
-          <div
-            className={stl.lang}
-            onClick={() => console.log("Lang-Btn Clicked...")}
-          >
+          <div className={stl.lang}>
             <USAFlag /> <span className={stl.langName}>en</span>
           </div>
           <div className={stl.divider}></div>
-          <button
-            className={stl.signupBtn}
-            onClick={() => console.log("Button Clicked...")}
-          >
-            Sign up
-          </button>
+          <button className={stl.signupBtn}>Sign up</button>
           <button
             id="btn"
             onClick={() => setIsExpand(!expand)}
@@ -95,10 +87,7 @@ const Header = ({ links, theme }: Props) => {
             <Link href={item.href}>{item.name}</Link>
           </li>
         ))}
-        <li
-          className={stl.lang2}
-          onClick={() => console.log("Lang-Btn Clicked...")}
-        >
+        <li className={stl.lang2}>
           <span className={stl.langName}>English</span>
           <USAFlag />
         </li>

@@ -16,24 +16,22 @@ interface Props {
   desc: string;
 }
 
-const HeroSection = ({ swap, src, heading, headingSpecial, desc }: Props) => {
-  return (
-    <div className={clsx(stl.heroSection, swap ? stl.right : "")}>
-      <div className={stl.img}>
-        <Image src={src} alt="image" layout="responsive" />
+const HeroSection = ({ swap, src, heading, headingSpecial, desc }: Props) => (
+  <div className={clsx(stl.heroSection, swap ? stl.right : "")}>
+    <div className={stl.img}>
+      <Image src={src} alt="image" layout="responsive" />
+    </div>
+    <div className={stl.content}>
+      <div className={stl.heading}>
+        {heading} <span>{headingSpecial}</span>
       </div>
-      <div className={stl.content}>
-        <div className={stl.heading}>
-          {heading} <span>{headingSpecial}</span>
-        </div>
-        <p className={stl.desc}>{desc}</p>
-        <div className={stl.btn}>
-          <Button />
-        </div>
+      <p className={stl.desc}>{desc}</p>
+      <div className={stl.btn}>
+        <Button />
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 HeroSection.defaultProps = {
   swap: false,

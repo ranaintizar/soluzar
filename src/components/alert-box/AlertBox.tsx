@@ -19,48 +19,46 @@ const AlertBox = ({
   variant,
   visible,
   theme,
-}: Props) => {
-  return (
+}: Props) => (
+  <div
+    className={clsx(
+      stl.alertBox,
+      visible ? stl.showPopup : "",
+      stl[`${theme}AlertBox`]
+    )}
+  >
     <div
-      className={clsx(
-        stl.alertBox,
-        visible ? stl.showPopup : "",
-        stl[`${theme}AlertBox`]
-      )}
+      className={stl.header}
+      style={
+        variant === "success"
+          ? { background: "#8fbc8f" }
+          : { background: "#ff6961" }
+      }
     >
-      <div
-        className={stl.header}
-        style={
-          variant === "success"
-            ? { background: "#8fbc8f" }
-            : { background: "#ff6961" }
-        }
-      >
-        <div className={stl.title}>
-          {variant === "success" ? "Subscribed!" : "Error!"}
-        </div>
-        <span className={stl.icon} onClick={handleCloseBtnClick}>
-          <CloseIcon />
-        </span>
+      <div className={stl.title}>
+        {variant === "success" ? "Subscribed!" : "Error!"}
       </div>
-      <div className={stl.msg}>
-        <p>
-          {variant === "success"
-            ? "You are subcribed successfully."
-            : "Please enter a valid email address."}
-        </p>
-        {variant === "success" ? <p>Your Email :</p> : undefined}
-        <p>{variant === "success" ? email : ""}</p>
-      </div>
+      <span className={stl.icon} onClick={handleCloseBtnClick}>
+        <CloseIcon />
+      </span>
     </div>
-  );
-};
+    <div className={stl.msg}>
+      <p>
+        {variant === "success"
+          ? "You are subcribed successfully."
+          : "Please enter a valid email address."}
+      </p>
+      {variant === "success" ? <p>Your Email :</p> : undefined}
+      <p>{variant === "success" ? email : ""}</p>
+    </div>
+  </div>
+);
 
 AlertBox.defaultProps = {
   visible: true,
   variant: "success",
   email: "admin@yourdomain.com",
-  handleCloseBtnClick: () => console.log("Close Btn Clicked..."),
+  handleCloseBtnClick: () => {},
 };
 
 export default AlertBox;
