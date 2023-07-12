@@ -7,7 +7,11 @@ import Img2 from "assets/feature-3.png";
 
 import stl from "./FeaturesSection.module.scss";
 
-const FeaturesSection = () => {
+interface Props {
+  theme: string;
+}
+
+const FeaturesSection = ({ theme }: Props) => {
   return (
     <div id="features" className={stl.featuresSec}>
       <div className={stl.content}>
@@ -18,13 +22,14 @@ const FeaturesSection = () => {
         </p>
       </div>
       <div className={stl.cards}>
-        <FeatureCard />
+        <FeatureCard theme={theme} />
         <FeatureCard
           customClass={stl.card}
           src={Img1}
           text="Checked homework by teachers"
+          theme={theme}
         />
-        <FeatureCard src={Img2} text="Modern internet platform" />
+        <FeatureCard src={Img2} text="Modern internet platform" theme={theme} />
       </div>
     </div>
   );

@@ -12,6 +12,7 @@
   height: 4.1rem;
   padding: 8px 1rem;
   background: #fff;
+  z-index: 10;
   transition: all 0.4s;
   overflow: hidden;
 
@@ -203,6 +204,26 @@
 
 .expand {
   height: 16.2rem;
+}
+
+.darkHeader {
+  background: #16161a;
+
+  .container .right {
+    .lang {
+      color: #fff;
+    }
+
+    .signupBtn {
+      border: 2px solid #f1f2f5;
+      color: #fff;
+
+      &:hover {
+        background: #7a4988;
+        border-color: #7a4988;
+      }
+    }
+  }
 }
 
 @keyframes top {

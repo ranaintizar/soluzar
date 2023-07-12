@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Head from "next/head";
 
 import CTA from "components/cta";
@@ -5,7 +6,6 @@ import FeaturesSection from "components/features-section";
 import Footer from "components/footer";
 import Header from "components/header";
 import Modal from "components/modal";
-import React from "react";
 import HeroSection from "components/hero-section";
 import Intro from "components/intro-section";
 import PlansSection from "components/plans-section";
@@ -16,12 +16,21 @@ import stl from "./home.module.scss";
 
 export default function Home() {
   const [showDialogue, setShowDialogue] = React.useState(false);
+  const [theme, setTheme] = React.useState("light");
   const [data, setData] = React.useState({
     variant: "success",
     email: "admin@yourdomain.com",
   });
 
-  console.log(showDialogue);
+  let isDarkMode = false;
+
+  if (typeof window !== "undefined") {
+    isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+  useEffect(() => {
+    isDarkMode ? setTheme("dark") : setTheme("light");
+  }, [isDarkMode]);
 
   return (
     <>
@@ -31,17 +40,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={stl[`${theme}Main`]}>
         {showDialogue ? (
           <Modal
+            theme={theme}
             visible={showDialogue}
             setIsVisible={setShowDialogue}
             data={data}
           />
         ) : undefined}
-        <Header />
+        <Header theme={theme} />
         <Intro />
-        <FeaturesSection />
+        <FeaturesSection theme={theme} />
         <div id="about" className={stl.section}>
           <HeroSection />
           <HeroSection
@@ -50,9 +60,13 @@ export default function Home() {
             heading="You can practice any time convenient for you"
           />
         </div>
-        <PlansSection />
+        <PlansSection theme={theme} />
         <CTA />
-        <Footer setShowDailogue={setShowDialogue} setData={setData} />
+        <Footer
+          setShowDailogue={setShowDialogue}
+          setData={setData}
+          theme={theme}
+        />
       </main>
     </>
   );

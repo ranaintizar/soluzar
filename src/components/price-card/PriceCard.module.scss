@@ -62,3 +62,16 @@
     border-color: #ed80fd;
   }
 }
+
+.darkPriceCard {
+  background: #2a2d47;
+  box-shadow: 0px 10px 50px 0px rgba(238, 154, 229, 0.15);
+
+  .price .variant {
+    color: #f1f2f5;
+  }
+
+  .features li {
+    color: #f1f1f1;
+  }
+}

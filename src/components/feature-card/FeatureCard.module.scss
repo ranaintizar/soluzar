@@ -27,6 +27,11 @@
   }
 }
 
+.darkFeatureCard {
+  background: #353752;
+  box-shadow: 0px 10px 50px 0px rgba(238, 154, 229, 0.15);
+}
+
 @media screen and (max-width: 748px) {
   .featureCard {
     width: 250px;
