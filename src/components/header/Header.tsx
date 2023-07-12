@@ -62,7 +62,7 @@ const Header = ({ links }: Props) => {
             className={stl.lang}
             onClick={() => console.log("Lang-Btn Clicked...")}
           >
-            <USAFlag /> <span className={stl.langName}>English</span>
+            <USAFlag /> <span className={stl.langName}>en</span>
           </div>
           <div className={stl.divider}></div>
           <button

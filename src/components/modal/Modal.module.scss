@@ -1,0 +1,12 @@
+@import "styles/common";
+
+.modal {
+  @extend .flexCenter;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #00000010;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+}

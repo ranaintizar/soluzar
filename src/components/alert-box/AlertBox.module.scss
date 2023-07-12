@@ -1,0 +1,80 @@
+@import "styles/common";
+
+.alertBox {
+  @extend .flexCol;
+  align-items: center;
+  width: 400px;
+  height: 150px;
+  background: #fff;
+  box-shadow: #00000059 0px 5px 15px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .header {
+    @extend .alignCen;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 10px;
+    background: #5cb85c;
+    color: #fff;
+
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .icon {
+      @extend .flexCenter;
+      @include setSquare(30px);
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background: #00000020;
+      }
+
+      &:active {
+        background: #00000040;
+      }
+    }
+  }
+
+  .msg {
+    @extend .flexColCen;
+    @include setSquare(100%);
+    padding: 10px;
+
+    p {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+}
+
+.showPopup {
+  animation: showPopup 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showPopup {
+  0% {
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes hidePopup {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}

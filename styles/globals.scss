@@ -25,6 +25,7 @@ body {
   main {
     min-height: 100vh;
     @extend .flexColCen;
+    position: relative;
     gap: 140px;
     padding-top: 7rem;
     color: #010851;
