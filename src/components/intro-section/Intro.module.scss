@@ -60,6 +60,7 @@
     align-items: center;
 
     .content {
+      width: 100%;
       max-width: 600px;
       padding: 5rem 1rem 0 1rem;
     }
@@ -76,6 +77,10 @@
   .intro {
     width: 100%;
     border-radius: 30px 30px 150px 30px;
+
+    .content {
+      padding: 5rem 0.5rem 0 0.5rem;
+    }
 
     .img {
       max-width: 400px;
