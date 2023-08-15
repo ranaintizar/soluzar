@@ -11,7 +11,7 @@
   max-width: 1300px;
   height: 4.1rem;
   padding: 8px 1rem;
-  backdrop-filter: blur(8px);
+  background: #fff;
   z-index: 10;
   transition: all 0.4s;
   overflow: hidden;
@@ -208,6 +208,8 @@
 }
 
 .darkHeader {
+  background: #2a2d47;
+
   .container .right {
     .lang {
       color: #fff;
@@ -220,6 +222,20 @@
       &:hover {
         background: #7a4988;
         border-color: #7a4988;
+      }
+    }
+
+    .expandBtn {
+      border: 1px solid #fff;
+
+      span {
+        background: #fff;
+      }
+
+      &:hover {
+        span {
+          background-color: #010851;
+        }
       }
     }
   }
