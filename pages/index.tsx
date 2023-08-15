@@ -29,7 +29,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    isDarkMode ? setTheme("dark") : setTheme("dark");
+    isDarkMode ? setTheme("dark") : setTheme("light");
   }, [isDarkMode]);
 
   return (
