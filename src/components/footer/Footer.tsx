@@ -1,45 +1,45 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import clsx from "clsx";
+import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import clsx from 'clsx'
 
-import Button from "components/button";
+import Button from 'components/button'
 
-import Img from "@/public/edu-logo.png";
-import FacebookIcon from "assets/facebook.svg";
-import TwitterIcon from "assets/twitter.svg";
-import InstagramIcon from "assets/instagram.svg";
-import LinkedInIcon from "assets/linkedin.svg";
+import Img from '@/public/edu-logo.png'
+import FacebookIcon from 'assets/facebook.svg'
+import TwitterIcon from 'assets/twitter.svg'
+import InstagramIcon from 'assets/instagram.svg'
+import LinkedInIcon from 'assets/linkedin.svg'
 
-import stl from "./Footer.module.scss";
+import stl from './Footer.module.scss'
 
 interface Props {
-  setShowDailogue: (arg: any) => void;
-  setData: (arg: any) => void;
-  theme: string;
+  setShowDailogue: (arg: any) => void
+  setData: (arg: any) => void
+  theme: string
 }
 
 const Footer = ({ setShowDailogue, setData, theme }: Props) => {
-  const [email, setEmail] = React.useState("");
+  const [email, setEmail] = React.useState('')
 
   const submitEmail = () => {
     validateEmail(email)
       ? setData({
-          variant: "success",
+          variant: 'success',
           email,
         })
       : setData({
-          variant: "error",
+          variant: 'error',
           email,
-        });
-    setEmail("");
-    setShowDailogue(true);
-  };
+        })
+    setEmail('')
+    setShowDailogue(true)
+  }
 
   const validateEmail = (email: string) => {
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
-  };
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailPattern.test(email)
+  }
 
   return (
     <div className={clsx(stl.footer, stl[`${theme}Footer`])}>
@@ -59,7 +59,7 @@ const Footer = ({ setShowDailogue, setData, theme }: Props) => {
                 placeholder="Your Email"
                 name="email"
                 type="email"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={e => setEmail(e.target.value)}
               />
               <Button
                 label="Subscribe"
@@ -124,23 +124,23 @@ const Footer = ({ setShowDailogue, setData, theme }: Props) => {
             &copy; Soluzar 2023. All rights reserved.
           </div>
           <div className={stl.socialLinks}>
-            <Link href="https://www.facebook.com/ranathedev" target="_blank">
+            <Link href="https://linkzar.fly.dev/facebook" target="_blank">
               <FacebookIcon />
             </Link>
-            <Link href="https://twitter.com/ranathedev" target="_blank">
+            <Link href="https://linkzar.fly.dev/twitter" target="_blank">
               <TwitterIcon />
             </Link>
-            <Link href="https://instagram.com/ranathedev" target="_blank">
+            <Link href="https://linkzar.fly.dev/insta" target="_blank">
               <InstagramIcon />
             </Link>
-            <Link href="https://linkedin.com/in/ranathedev" target="_blank">
+            <Link href="https://linkzar.fly.dev/linkedin" target="_blank">
               <LinkedInIcon />
             </Link>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
