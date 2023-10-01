@@ -1,36 +1,36 @@
-import React, { useEffect } from "react";
-import Head from "next/head";
+import React, { useEffect } from 'react'
+import Head from 'next/head'
 
-import CTA from "components/cta";
-import FeaturesSection from "components/features-section";
-import Footer from "components/footer";
-import Header from "components/header";
-import Modal from "components/modal";
-import HeroSection from "components/hero-section";
-import Intro from "components/intro-section";
-import PlansSection from "components/plans-section";
+import CTA from 'components/cta'
+import FeaturesSection from 'components/features-section'
+import Footer from 'components/footer'
+import Header from 'components/header'
+import Modal from 'components/modal'
+import HeroSection from 'components/hero-section'
+import Intro from 'components/intro-section'
+import PlansSection from 'components/plans-section'
 
-import Img from "assets/image-3.png";
+import Img from 'assets/image-3.png'
 
-import stl from "./home.module.scss";
+import stl from './home.module.scss'
 
 export default function Home() {
-  const [showDialogue, setShowDialogue] = React.useState(false);
-  const [theme, setTheme] = React.useState("light");
+  const [showDialogue, setShowDialogue] = React.useState(false)
+  const [theme, setTheme] = React.useState('light')
   const [data, setData] = React.useState({
-    variant: "success",
-    email: "admin@yourdomain.com",
-  });
+    variant: 'success',
+    email: 'admin@yourdomain.com',
+  })
 
-  let isDarkMode = false;
+  let isDarkMode = false
 
-  if (typeof window !== "undefined") {
-    isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (typeof window !== 'undefined') {
+    isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
   }
 
   useEffect(() => {
-    isDarkMode ? setTheme("dark") : setTheme("light");
-  }, [isDarkMode]);
+    isDarkMode ? setTheme('dark') : setTheme('light')
+  }, [isDarkMode])
 
   return (
     <>
@@ -69,5 +69,5 @@ export default function Home() {
         />
       </main>
     </>
-  );
+  )
 }

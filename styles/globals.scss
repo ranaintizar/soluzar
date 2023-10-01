@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap");
-@import "styles/common";
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+@import 'styles/common';
 
 * {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
 }
 
 body {
