@@ -124,16 +124,28 @@ const Footer = ({ setShowDailogue, setData, theme }: Props) => {
             &copy; Soluzar 2023. All rights reserved.
           </div>
           <div className={stl.socialLinks}>
-            <Link href="https://linkzar.fly.dev/facebook" target="_blank">
+            <Link
+              href="https://proxar.ranaintizar.com/me/facebook"
+              target="_blank"
+            >
               <FacebookIcon />
             </Link>
-            <Link href="https://linkzar.fly.dev/twitter" target="_blank">
+            <Link
+              href="https://proxar.ranaintizar.com/me/twitter"
+              target="_blank"
+            >
               <TwitterIcon />
             </Link>
-            <Link href="https://linkzar.fly.dev/instagram" target="_blank">
+            <Link
+              href="https://proxar.ranaintizar.com/me/instagram"
+              target="_blank"
+            >
               <InstagramIcon />
             </Link>
-            <Link href="https://linkzar.fly.dev/linkedin" target="_blank">
+            <Link
+              href="https://proxar.ranaintizar.com/me/linkedin"
+              target="_blank"
+            >
               <LinkedInIcon />
             </Link>
           </div>
