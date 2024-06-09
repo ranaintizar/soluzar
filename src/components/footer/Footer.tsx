@@ -130,7 +130,7 @@ const Footer = ({ setShowDailogue, setData, theme }: Props) => {
             <Link href="https://linkzar.fly.dev/twitter" target="_blank">
               <TwitterIcon />
             </Link>
-            <Link href="https://linkzar.fly.dev/insta" target="_blank">
+            <Link href="https://linkzar.fly.dev/instagram" target="_blank">
               <InstagramIcon />
             </Link>
             <Link href="https://linkzar.fly.dev/linkedin" target="_blank">
